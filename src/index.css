@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Premium Consultant Design System */
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 202 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 202 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 202 100% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 20%) 0%, hsl(202 100% 35%) 50%, hsl(202 100% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 15% 96%) 100%);
+
+    --shadow-soft: 0 4px 24px -4px hsl(202 100% 50% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(202 100% 50% / 0.12);
+    --shadow-glow: 0 0 60px hsl(202 100% 50% / 0.15);
+
+    --font-heading: 'Instrument Serif', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 20%;
+    --sidebar-primary: 202 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 92%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 220 15% 85%;
+    --sidebar-ring: 202 100% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 25% 16%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 18% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 202 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 202 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 202 100% 50%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(202 100% 20%) 50%, hsl(202 100% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 4%) 0%, hsl(220 18% 8%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 18% 10%) 0%, hsl(220 15% 6%) 100%);
+
+    --shadow-soft: 0 4px 24px -4px hsl(202 100% 50% / 0.1);
+    --shadow-elevated: 0 12px 40px -8px hsl(202 100% 50% / 0.15);
+    --shadow-glow: 0 0 60px hsl(202 100% 50% / 0.2);
+
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 202 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 202 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+}
+
+/* Dark mode card hover effects */
+.dark .bg-card {
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, background-image 0.4s ease, transform 0.4s ease;
+}
+
+.dark .bg-card:hover {
+  border-color: hsla(202, 100%, 50%, 0.5);
+  box-shadow: inset 0 0 30px hsla(202, 100%, 50%, 0.1), 0 0 20px hsla(202, 100%, 50%, 0.15);
+  background-image: radial-gradient(ellipse at center, hsla(202, 100%, 50%, 0.15) 0%, hsla(202, 100%, 50%, 0.05) 40%, transparent 70%);
+  transform: translateY(-3px);
+}
