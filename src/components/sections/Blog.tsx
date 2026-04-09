@@ -7,7 +7,7 @@ const posts = [
     slug: "ai-automation-local-business",
     title: "How AI Automation Can Transform Your Local Business",
     excerpt: "Discover how AI-powered workflows can save time, reduce costs, and boost revenue for local service businesses.",
-    date: "2024-01-15",
+    date: "2024-01-16",
   },
   {
     slug: "local-seo-guide-2024",
