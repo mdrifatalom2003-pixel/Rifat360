@@ -40,54 +40,47 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <script
-      src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
-      async
-      type="text/javascript">
-    </script>
-
-    <vapi-widget
-      id="vapi-widget"
-      public-key="cf7a29ca-dd5e-49f6-b8dc-850c409ea9cd"
-      assistant-id="59cad5a2-e2e3-4c3a-b7f5-77b8129c3a6e"
-      mode="voice"
-      theme="dark"
-      size="compact"
-      position="bottom-right"
-      accent-color="#00a3ff"
-      title="AI Support"
-      cta-title="Talk to our AI"
-      cta-subtitle="Instant answers, 24/7"
-      start-button-text="Start Call"
-      end-button-text="End Call"
-      voice-show-transcript="true"
-    ></vapi-widget>
-
     <script>
-      function syncVapiTheme() {
-        const widget = document.getElementById('vapi-widget');
-        if (!widget) return;
+      var vapiInstance = null;
+      const assistant = "59cad5a2-e2e3-4c3a-b7f5-77b8129c3a6e";
+      const apiKey = "cf7a29ca-dd5e-49f6-b8dc-850c409ea9cd";
+      const buttonConfig = {
+        position: "bottom-right",
+        offset: "40px",
+        width: "56px",
+        height: "56px",
+        idle: {
+          color: "#00a3ff",
+          type: "round",
+          icon: "https://unpkg.com/lucide-static@0.321.0/icons/mic.svg"
+        },
+        loading: {
+          color: "#0082cc",
+          type: "round",
+          icon: "https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg"
+        },
+        active: {
+          color: "#00c853",
+          type: "round",
+          icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg"
+        }
+      };
 
-        const isDark =
-          document.documentElement.classList.contains('dark') ||
-          document.documentElement.getAttribute('data-theme') === 'dark' ||
-          document.body.classList.contains('dark') ||
-          document.body.getAttribute('data-theme') === 'dark';
-
-        widget.setAttribute('theme', isDark ? 'dark' : 'light');
-      }
-
-      syncVapiTheme();
-
-      const observer = new MutationObserver(syncVapiTheme);
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['class', 'data-theme']
-      });
-      observer.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['class', 'data-theme']
-      });
+      (function(d, t) {
+        var g = document.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+        g.onload = function() {
+          vapiInstance = window.vapiSDK.run({
+            apiKey: apiKey,
+            assistant: assistant,
+            config: buttonConfig
+          });
+        };
+      })(document, "script");
     </script>
   </body>
 </html>
