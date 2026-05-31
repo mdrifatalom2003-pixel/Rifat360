@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import VapiCallModal from "./components/VapiCallModal";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <VapiCallModal />
     </TooltipProvider>
   </QueryClientProvider>
 );

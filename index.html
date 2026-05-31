@@ -39,6 +39,13 @@
         right: 40px !important;
         z-index: 99999 !important;
       }
+      /* Force Vapi button icon to render white and centered */
+      [id*="vapi"] img {
+        filter: brightness(0) invert(1) !important;
+        width: 24px !important;
+        height: 24px !important;
+        margin: auto !important;
+      }
     </style>
   </head>
 
@@ -61,7 +68,7 @@
         idle: {
           color: "#00a3ff",
           type: "round",
-          icon: "https://unpkg.com/lucide-static@0.321.0/icons/mic.svg"
+          icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
         },
         loading: {
           color: "#0082cc",
