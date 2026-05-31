@@ -32,21 +32,6 @@
     <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8259e585-3535-4c4e-a942-bdacb19c3a9c/id-preview-1b207dbb--3b8187e4-6bbc-4ca9-bbe8-c7523a1141d5.lovable.app-1775211995783.png" />
     <meta name="twitter:image:alt" content="Rifat360 — AI Automation Systems for Local & Service Businesses" />
 
-    <style>
-      [id*="vapi"] {
-        position: fixed !important;
-        bottom: 40px !important;
-        right: 40px !important;
-        z-index: 99999 !important;
-      }
-      /* Force Vapi button icon to render white and centered */
-      [id*="vapi"] img {
-        filter: brightness(0) invert(1) !important;
-        width: 24px !important;
-        height: 24px !important;
-        margin: auto !important;
-      }
-    </style>
   </head>
 
   <body>
@@ -55,48 +40,5 @@
     </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
-    <script>
-      var vapiInstance = null;
-      const assistant = "59cad5a2-e2e3-4c3a-b7f5-77b8129c3a6e";
-      const apiKey = "cf7a29ca-dd5e-49f6-b8dc-850c409ea9cd";
-      const buttonConfig = {
-        position: "bottom-right",
-        offset: "40px",
-        width: "56px",
-        height: "56px",
-        idle: {
-          color: "#00a3ff",
-          type: "round",
-          icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
-        },
-        loading: {
-          color: "#0082cc",
-          type: "round",
-          icon: "https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg"
-        },
-        active: {
-          color: "#00c853",
-          type: "round",
-          icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg"
-        }
-      };
-
-      (function(d, t) {
-        var g = document.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-        g.onload = function() {
-          vapiInstance = window.vapiSDK.run({
-            apiKey: apiKey,
-            assistant: assistant,
-            config: buttonConfig
-          });
-        };
-      })(document, "script");
-    </script>
   </body>
 </html>
