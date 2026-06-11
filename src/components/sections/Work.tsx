@@ -94,6 +94,25 @@ const projects = [
       "Scalable content workflow",
     ],
   },
+  {
+    num: "06",
+    title: "AI Dental Receptionist & Appointment Automation",
+    problem: "Dental clinics lose potential patients because inquiries go unanswered during busy treatment hours and after business hours.",
+    solution: "Implemented a 24/7 AI Voice Receptionist that answers patient questions, checks availability, books appointments, and manages scheduling automatically.",
+    workflow: [
+      "Patient clicks website voice widget",
+      "AI receptionist answers inquiry",
+      "System checks Google Calendar availability",
+      "Appointment is booked automatically",
+      "Clinic receives instant notification",
+    ],
+    tools: ["Vapi", "ElevenLabs", "OpenAI", "n8n", "Google Calendar", "Google Sheets"],
+    impact: [
+      "24/7 patient response coverage",
+      "More appointment opportunities captured",
+      "Reduced reception workload",
+    ],
+  },
 ];
 
 const caseStudies = [
