@@ -117,6 +117,18 @@ const projects = [
 
 const caseStudies = [
   {
+    title: "Dental Clinic AI Receptionist",
+    category: "AI Automation",
+    role: "AI System Architecture & Automation Development",
+    problem: "The clinic was missing patient inquiries outside business hours and during busy treatment periods, resulting in lost appointment opportunities and increased pressure on reception staff.",
+    solution: "Implemented a fully managed AI Voice Receptionist integrated with the clinic website, phone number and Google Calendar to automate patient communication, appointment management and captures patient information automatically.",
+    results: [
+      { metric: "24/7", label: "Patient Inquiry Coverage" },
+      { metric: "Instant", label: "Appointment Booking & Availability Checks" },
+      { metric: "80%+", label: "Reduction in Manual Scheduling Tasks & reception workload" },
+    ],
+  },
+  {
     title: "HVAC Service Automation",
     category: "AI Automation",
     role: "Automation architecture & AI system design",
