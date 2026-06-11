@@ -5,6 +5,25 @@ import { ArrowUpRight, Check } from "lucide-react";
 const projects = [
   {
     num: "01",
+    title: "AI Dental Receptionist & Appointment Automation",
+    problem: "Dental clinics lose potential patients because inquiries go unanswered during busy treatment hours and after business hours.",
+    solution: "Implemented a 24/7 AI Voice Receptionist that answers patient questions, checks availability, books appointments, and manages scheduling automatically.",
+    workflow: [
+      "Patient clicks website voice widget",
+      "AI receptionist answers inquiry",
+      "System checks Google Calendar availability",
+      "Appointment is booked automatically",
+      "Clinic receives instant notification",
+    ],
+    tools: ["Vapi", "ElevenLabs", "OpenAI", "n8n", "Google Calendar", "Google Sheets"],
+    impact: [
+      "24/7 patient response coverage",
+      "More appointment opportunities captured",
+      "Reduced reception workload",
+    ],
+  },
+  {
+    num: "02",
     title: "AI Messenger Customer Support Automation",
     problem: "Businesses miss sales & leads because they can't reply instantly to Facebook messages.",
     solution: "Developed an AI-powered Messenger chatbot that responds instantly and accurately.",
@@ -22,7 +41,7 @@ const projects = [
     ],
   },
   {
-    num: "02",
+    num: "03",
     title: "AI Email Marketing Automation System",
     problem: "Sending personalized emails manually from lead lists is slow and error-prone.",
     solution: "Created an end-to-end email marketing automation that sends AI-personalized emails from Google Sheets.",
@@ -41,7 +60,7 @@ const projects = [
     ],
   },
   {
-    num: "03",
+    num: "04",
     title: "AI Lead Qualification Agent",
     problem: "Businesses waste time on low-quality or unqualified leads.",
     solution: "Built an AI-powered lead qualification system that scores and categorizes leads automatically.",
@@ -60,7 +79,7 @@ const projects = [
     ],
   },
   {
-    num: "04",
+    num: "05",
     title: "AI-Powered Gmail Labeling System",
     problem: "Business owners receive dozens of emails daily and manually sorting them wastes time.",
     solution: "Built an AI-based Gmail automation that automatically reads incoming emails and applies labels based on content intent.",
@@ -77,7 +96,7 @@ const projects = [
     ],
   },
   {
-    num: "05",
+    num: "06",
     title: "AI Social Media Post Generation System",
     problem: "Creating daily social media content is time-consuming for businesses.",
     solution: "Built an AI system that generates social media posts automatically based on structured inputs.",
@@ -92,25 +111,6 @@ const projects = [
       "Saves hours of content creation time",
       "Consistent posting",
       "Scalable content workflow",
-    ],
-  },
-  {
-    num: "06",
-    title: "AI Dental Receptionist & Appointment Automation",
-    problem: "Dental clinics lose potential patients because inquiries go unanswered during busy treatment hours and after business hours.",
-    solution: "Implemented a 24/7 AI Voice Receptionist that answers patient questions, checks availability, books appointments, and manages scheduling automatically.",
-    workflow: [
-      "Patient clicks website voice widget",
-      "AI receptionist answers inquiry",
-      "System checks Google Calendar availability",
-      "Appointment is booked automatically",
-      "Clinic receives instant notification",
-    ],
-    tools: ["Vapi", "ElevenLabs", "OpenAI", "n8n", "Google Calendar", "Google Sheets"],
-    impact: [
-      "24/7 patient response coverage",
-      "More appointment opportunities captured",
-      "Reduced reception workload",
     ],
   },
 ];
