@@ -8,12 +8,11 @@ const services = [
     icon: Phone,
     badge: "Most Popular",
     headline: "AI Voice Receptionist",
-    description: "Never miss a call again. Your AI receptionist answers calls 24/7, books appointments, qualifies leads, and transfers urgent calls automatically.",
+    description: "Never miss a call. AI answers calls 24/7, books appointments, and qualifies leads automatically.",
     benefits: [
       "24/7 Call Answering",
       "Appointment Booking",
       "Lead Qualification",
-      "Google Calendar Integration",
     ],
     cta: "Book a Demo →",
   },
