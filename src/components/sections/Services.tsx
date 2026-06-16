@@ -119,30 +119,32 @@ export function Services() {
                   </div>
                 )}
 
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                  <service.icon className="w-7 h-7 text-primary" />
+                <div className="flex-1 flex flex-col">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                    <service.icon className="w-7 h-7 text-primary" />
+                  </div>
+
+                  <h3 className="text-xl font-normal text-foreground mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {service.headline}
+                  </h3>
+
+                  <p className="text-muted-foreground font-body text-sm mb-6">
+                    {service.description}
+                  </p>
+
+                  <div className="space-y-3">
+                    {service.benefits.map((benefit) => (
+                      <div key={benefit} className="flex items-center gap-3">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span className="text-sm font-body text-foreground">
+                          {benefit}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <h3 className="text-xl font-normal text-foreground mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {service.headline}
-                </h3>
-
-                <p className="text-muted-foreground font-body text-sm mb-6">
-                  {service.description}
-                </p>
-
-                <div className="space-y-3 mb-8">
-                  {service.benefits.map((benefit) => (
-                    <div key={benefit} className="flex items-center gap-3">
-                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span className="text-sm font-body text-foreground">
-                        {benefit}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button variant="default" className="w-full" asChild>
+                <Button variant="default" className="w-full mt-auto" asChild>
                   <a href="#contact" className="flex items-center justify-center gap-2">
                     {service.cta}
                   </a>
