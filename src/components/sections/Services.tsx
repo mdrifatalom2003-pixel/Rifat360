@@ -109,7 +109,7 @@ export function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.08 }}
-                className={`relative bg-card rounded-2xl p-8 border-t-[3px] border-t-primary shadow-soft hover:shadow-elevated transition-all duration-300 dark:bg-[#1a2235] dark:border dark:border-t-[3px] dark:border-white/[0.08] dark:border-t-primary dark:hover:border-primary/50 dark:hover:[box-shadow:inset_0_0_30px_rgba(0,163,255,0.1),0_0_20px_rgba(0,163,255,0.15)] dark:hover:bg-[radial-gradient(ellipse_at_center,rgba(0,163,255,0.15)_0%,rgba(0,163,255,0.05)_40%,transparent_70%),#1a2235] dark:hover:-translate-y-[3px] ${index >= 2 ? "" : ""}`}
+                className={`relative h-full flex flex-col bg-card rounded-2xl p-8 border-t-[3px] border-t-primary shadow-soft hover:shadow-elevated transition-all duration-300 dark:bg-[#1a2235] dark:border dark:border-t-[3px] dark:border-white/[0.08] dark:border-t-primary dark:hover:border-primary/50 dark:hover:[box-shadow:inset_0_0_30px_rgba(0,163,255,0.1),0_0_20px_rgba(0,163,255,0.15)] dark:hover:bg-[radial-gradient(ellipse_at_center,rgba(0,163,255,0.15)_0%,rgba(0,163,255,0.05)_40%,transparent_70%),#1a2235] dark:hover:-translate-y-[3px]`}
               >
                 {service.badge && (
                   <div className="absolute top-4 right-4">
