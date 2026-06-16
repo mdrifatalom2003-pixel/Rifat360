@@ -1,63 +1,74 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Target, Mail, Smartphone, Search, Check, ArrowRight } from "lucide-react";
+import { Phone, Target, MessageCircle, Mail, Smartphone, Search, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: MessageCircle,
+    icon: Phone,
     badge: "Most Popular",
-    headline: "Never Miss a Customer Message Again",
-    description: "Automatically reply to Facebook, WhatsApp & website messages in seconds — 24/7.",
+    headline: "AI Voice Receptionist",
+    description: "Never miss a call again. Your AI receptionist answers calls 24/7, books appointments, qualifies leads, and transfers urgent calls automatically.",
     benefits: [
-      "Instant replies (0–10 sec)",
-      "Lead qualification built-in",
-      "Auto follow-ups",
+      "24/7 Call Answering",
+      "Appointment Booking",
+      "Lead Qualification",
+      "Google Calendar Integration",
     ],
-    cta: "Get This System →",
+    cta: "Book a Demo →",
   },
   {
     icon: Target,
-    headline: "Filter High-Quality Leads Automatically",
-    description: "Stop wasting time on bad leads — only focus on customers ready to buy.",
+    headline: "AI Lead Qualification System",
+    description: "Filter high-quality leads automatically and focus only on prospects ready to buy.",
     benefits: [
-      "AI scoring system",
-      "Qualified leads sent to CRM",
-      "Instant notifications",
+      "AI Lead Scoring",
+      "Instant Qualification",
+      "CRM Integration",
     ],
     cta: "See How It Works →",
   },
   {
-    icon: Mail,
-    headline: "Send Personalized Emails on Autopilot",
-    description: "Reach hundreds of leads without writing emails manually.",
+    icon: MessageCircle,
+    headline: "AI Chat Assistant",
+    description: "Automatically reply to website, Facebook, and WhatsApp inquiries within seconds.",
     benefits: [
-      "AI-generated emails",
-      "Automated follow-ups",
-      "No duplicate sending",
+      "Instant Responses",
+      "Lead Capture",
+      "24/7 Availability",
+    ],
+    cta: "Get This System →",
+  },
+  {
+    icon: Mail,
+    headline: "Email Outreach Automation",
+    description: "Send personalized outreach campaigns without manually writing every email.",
+    benefits: [
+      "Personalized Emails",
+      "Follow-up Automation",
+      "Lead Nurturing",
     ],
     cta: "Automate My Outreach →",
   },
   {
     icon: Smartphone,
-    headline: "Generate & Publish Content Automatically",
-    description: "Stay consistent on social media without spending hours creating content.",
+    headline: "Content Automation System",
+    description: "Generate and publish content consistently without spending hours creating it.",
     benefits: [
-      "AI content generation",
-      "Auto posting system",
-      "Scalable workflow",
+      "AI Content Creation",
+      "Auto Publishing",
+      "Scalable Workflow",
     ],
     cta: "Set Up My System →",
   },
   {
     icon: Search,
-    badge: "Premium",
-    headline: "Get Your Business Recommended by AI",
-    description: "Position your brand to show up in AI answers, not just google search results.",
+    headline: "AI Search Visibility",
+    description: "Help your business appear in AI answers and search results where customers are looking.",
     benefits: [
-      "AI-first content optimization",
-      "Multi-platform visibility (Search + AI)",
-      "Long-term authority building",
+      "AI Search Optimization",
+      "Multi-Platform Visibility",
+      "Authority Building",
     ],
     cta: "Boost AI Visibility →",
   },
@@ -83,10 +94,10 @@ export function Services() {
               Services
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mt-4 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              AI Systems That Replace Manual Work & Bring More Customers
+              AI Systems That Answer Calls, Book Appointments & Generate More Revenue
             </h2>
             <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-              I don't build automations — I install systems that bring leads & save cost.
+              I build AI systems that help service businesses capture more opportunities and save time.
             </p>
           </motion.div>
 
@@ -144,3 +155,4 @@ export function Services() {
     </section>
   );
 }
+
