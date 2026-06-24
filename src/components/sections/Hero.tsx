@@ -103,23 +103,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Trust indicators - full width below grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="mt-16 pt-8 border-t border-border/50 text-center"
-        >
-          <p className="text-sm text-muted-foreground mb-4">
-            Trusted by service businesses across Europe & Australia
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 opacity-50">
-            <div className="text-base font-heading text-foreground">HVAC Pro</div>
-            <div className="text-base font-heading text-foreground">ElectriFix</div>
-            <div className="text-base font-heading text-foreground">FitLife Studio</div>
-            <div className="text-base font-heading text-foreground">PlumbRight</div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
