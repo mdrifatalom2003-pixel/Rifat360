@@ -30,8 +30,7 @@ const projects = [
   {
     num: "02",
     title: "AI Messenger Customer Support Automation",
-    // Replace with the real n8n workflow screenshot path
-    workflowImage: "/workflows/messenger-support.svg",
+    workflowImage: messengerWorkflow.url,
     problem: "Businesses miss sales & leads because they can't reply instantly to Facebook messages.",
     solution: "Developed an AI-powered Messenger chatbot that responds instantly and accurately.",
     workflow: [
@@ -50,8 +49,7 @@ const projects = [
   {
     num: "03",
     title: "AI Email Marketing Automation System",
-    // Replace with the real n8n workflow screenshot path
-    workflowImage: "/workflows/email-marketing.svg",
+    workflowImage: emailMarketingWorkflow.url,
     problem: "Sending personalized emails manually from lead lists is slow and error-prone.",
     solution: "Created an end-to-end email marketing automation that sends AI-personalized emails from Google Sheets.",
     workflow: [
@@ -71,8 +69,7 @@ const projects = [
   {
     num: "04",
     title: "AI Lead Qualification Agent",
-    // Replace with the real n8n workflow screenshot path
-    workflowImage: "/workflows/lead-qualification.svg",
+    workflowImage: leadQualificationWorkflow.url,
     problem: "Businesses waste time on low-quality or unqualified leads.",
     solution: "Built an AI-powered lead qualification system that scores and categorizes leads automatically.",
     workflow: [
@@ -109,8 +106,7 @@ const projects = [
   {
     num: "06",
     title: "AI Social Media Post Generation System",
-    // Replace with the real n8n workflow screenshot path
-    workflowImage: "/workflows/social-media.svg",
+    workflowImage: socialMediaWorkflow.url,
     problem: "Creating daily social media content is time-consuming for businesses.",
     solution: "Built an AI system that generates social media posts automatically based on structured inputs.",
     workflow: [
