@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight, Check, Maximize2 } from "lucide-react";
+import { WorkflowLightbox } from "@/components/WorkflowLightbox";
 
 const projects = [
   {
@@ -25,6 +26,8 @@ const projects = [
   {
     num: "02",
     title: "AI Messenger Customer Support Automation",
+    // Replace with the real n8n workflow screenshot path
+    workflowImage: "/workflows/messenger-support.svg",
     problem: "Businesses miss sales & leads because they can't reply instantly to Facebook messages.",
     solution: "Developed an AI-powered Messenger chatbot that responds instantly and accurately.",
     workflow: [
@@ -43,6 +46,8 @@ const projects = [
   {
     num: "03",
     title: "AI Email Marketing Automation System",
+    // Replace with the real n8n workflow screenshot path
+    workflowImage: "/workflows/email-marketing.svg",
     problem: "Sending personalized emails manually from lead lists is slow and error-prone.",
     solution: "Created an end-to-end email marketing automation that sends AI-personalized emails from Google Sheets.",
     workflow: [
@@ -62,6 +67,8 @@ const projects = [
   {
     num: "04",
     title: "AI Lead Qualification Agent",
+    // Replace with the real n8n workflow screenshot path
+    workflowImage: "/workflows/lead-qualification.svg",
     problem: "Businesses waste time on low-quality or unqualified leads.",
     solution: "Built an AI-powered lead qualification system that scores and categorizes leads automatically.",
     workflow: [
@@ -98,6 +105,8 @@ const projects = [
   {
     num: "06",
     title: "AI Social Media Post Generation System",
+    // Replace with the real n8n workflow screenshot path
+    workflowImage: "/workflows/social-media.svg",
     problem: "Creating daily social media content is time-consuming for businesses.",
     solution: "Built an AI system that generates social media posts automatically based on structured inputs.",
     workflow: [
@@ -170,6 +179,7 @@ export function Work() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeTab, setActiveTab] = useState<"projects" | "cases">("projects");
+  const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
 
   return (
     <section id="work" className="py-24 md:py-32 bg-secondary/30">
@@ -285,6 +295,24 @@ export function Work() {
                       </div>
                     </div>
 
+                    {/* Workflow proof */}
+                    {project.workflowImage && (
+                      <div className="mb-6">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setLightbox({ src: project.workflowImage!, title: project.title })
+                          }
+                          aria-label={`View workflow screenshot for ${project.title}`}
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 bg-primary/5 hover:bg-primary/10 rounded-full px-4 py-2 transition-colors duration-300"
+                        >
+                          <Maximize2 className="w-4 h-4" />
+                          View Workflow
+                          <ArrowUpRight className="w-4 h-4" />
+                        </button>
+                      </div>
+                    )}
+
                     {/* Tools */}
                     <div>
                       <h4 className="text-sm font-medium text-primary mb-3">Tools Used</h4>
@@ -354,6 +382,14 @@ export function Work() {
           </motion.div>
         </div>
       </div>
+
+      <WorkflowLightbox
+        open={!!lightbox}
+        onClose={() => setLightbox(null)}
+        src={lightbox?.src ?? ""}
+        alt={lightbox ? `${lightbox.title} n8n workflow screenshot` : ""}
+        title={lightbox?.title}
+      />
     </section>
   );
 }
