@@ -2,6 +2,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowUpRight, Check, Maximize2 } from "lucide-react";
 import { WorkflowLightbox } from "@/components/WorkflowLightbox";
+import messengerWorkflow from "@/assets/messenger-workflow.png.asset.json";
+import emailMarketingWorkflow from "@/assets/email-marketing-workflow.png.asset.json";
+import leadQualificationWorkflow from "@/assets/lead-qualification-workflow.png.asset.json";
+import socialMediaWorkflow from "@/assets/social-media-workflow.png.asset.json";
 
 const projects = [
   {
