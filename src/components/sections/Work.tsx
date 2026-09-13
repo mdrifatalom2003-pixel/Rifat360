@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowUpRight, Check, Maximize2 } from "lucide-react";
-import { WorkflowLightbox } from "@/components/WorkflowLightbox";
+import { ArrowUpRight, Check } from "lucide-react";
 import messengerWorkflow from "@/assets/messenger-workflow.png.asset.json";
 import emailMarketingWorkflow from "@/assets/email-marketing-workflow.png.asset.json";
 import leadQualificationWorkflow from "@/assets/lead-qualification-workflow.png.asset.json";
@@ -179,7 +178,6 @@ export function Work() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeTab, setActiveTab] = useState<"projects" | "cases">("projects");
-  const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
 
   return (
     <section id="work" className="py-24 md:py-32 bg-secondary/30">
@@ -379,13 +377,6 @@ export function Work() {
         </div>
       </div>
 
-      <WorkflowLightbox
-        open={!!lightbox}
-        onClose={() => setLightbox(null)}
-        src={lightbox?.src ?? ""}
-        alt={lightbox ? `${lightbox.title} n8n workflow screenshot` : ""}
-        title={lightbox?.title}
-      />
     </section>
   );
 }
