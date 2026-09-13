@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowUpRight, Check, Maximize2 } from "lucide-react";
-import { WorkflowLightbox } from "@/components/WorkflowLightbox";
+import { ArrowUpRight, Check } from "lucide-react";
 import messengerWorkflow from "@/assets/messenger-workflow.png.asset.json";
 import emailMarketingWorkflow from "@/assets/email-marketing-workflow.png.asset.json";
 import leadQualificationWorkflow from "@/assets/lead-qualification-workflow.png.asset.json";
@@ -179,7 +178,6 @@ export function Work() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeTab, setActiveTab] = useState<"projects" | "cases">("projects");
-  const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
 
   return (
     <section id="work" className="py-24 md:py-32 bg-secondary/30">
@@ -255,6 +253,19 @@ export function Work() {
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
                     </div>
 
+                    {/* Workflow cover image */}
+                    {project.workflowImage && (
+                      <div className="mb-6 rounded-xl border border-primary/20 bg-secondary/40 overflow-hidden">
+                        <img
+                          src={project.workflowImage}
+                          alt={`${project.title} n8n workflow screenshot`}
+                          loading="lazy"
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    )}
+
+
                     {/* Problem & Solution */}
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
@@ -295,23 +306,6 @@ export function Work() {
                       </div>
                     </div>
 
-                    {/* Workflow proof */}
-                    {project.workflowImage && (
-                      <div className="mb-6">
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setLightbox({ src: project.workflowImage!, title: project.title })
-                          }
-                          aria-label={`View workflow screenshot for ${project.title}`}
-                          className="inline-flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 bg-primary/5 hover:bg-primary/10 rounded-full px-4 py-2 transition-colors duration-300"
-                        >
-                          <Maximize2 className="w-4 h-4" />
-                          View Workflow
-                          <ArrowUpRight className="w-4 h-4" />
-                        </button>
-                      </div>
-                    )}
 
                     {/* Tools */}
                     <div>
@@ -383,13 +377,6 @@ export function Work() {
         </div>
       </div>
 
-      <WorkflowLightbox
-        open={!!lightbox}
-        onClose={() => setLightbox(null)}
-        src={lightbox?.src ?? ""}
-        alt={lightbox ? `${lightbox.title} n8n workflow screenshot` : ""}
-        title={lightbox?.title}
-      />
     </section>
   );
 }
