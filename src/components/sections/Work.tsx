@@ -295,23 +295,6 @@ export function Work() {
                       </div>
                     </div>
 
-                    {/* Workflow proof */}
-                    {project.workflowImage && (
-                      <div className="mb-6">
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setLightbox({ src: project.workflowImage!, title: project.title })
-                          }
-                          aria-label={`View workflow screenshot for ${project.title}`}
-                          className="inline-flex items-center gap-2 text-sm font-medium text-primary border border-primary/30 bg-primary/5 hover:bg-primary/10 rounded-full px-4 py-2 transition-colors duration-300"
-                        >
-                          <Maximize2 className="w-4 h-4" />
-                          View Workflow
-                          <ArrowUpRight className="w-4 h-4" />
-                        </button>
-                      </div>
-                    )}
 
                     {/* Tools */}
                     <div>
