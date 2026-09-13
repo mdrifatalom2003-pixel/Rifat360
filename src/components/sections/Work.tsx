@@ -255,6 +255,19 @@ export function Work() {
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
                     </div>
 
+                    {/* Workflow cover image */}
+                    {project.workflowImage && (
+                      <div className="mb-6 rounded-xl border border-primary/20 bg-secondary/40 overflow-hidden">
+                        <img
+                          src={project.workflowImage}
+                          alt={`${project.title} n8n workflow screenshot`}
+                          loading="lazy"
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    )}
+
+
                     {/* Problem & Solution */}
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
