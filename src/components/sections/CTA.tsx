@@ -34,7 +34,7 @@ export function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="lg" asChild>
-              <a href="https://calendar.app.google/jdn353vERWDFcbL18" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <a href="https://cal.com/rifat-alom-2003/30-min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Calendar size={18} />
                 Schedule a Call
               </a>
