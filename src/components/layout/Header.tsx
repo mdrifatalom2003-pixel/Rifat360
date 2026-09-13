@@ -64,7 +64,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <Button variant="default" size="sm" asChild>
-              <a href="#contact">Book a Call</a>
+              <a href="https://cal.com/rifat-alom-2003/30-min" target="_blank" rel="noopener noreferrer">Book a Call</a>
             </Button>
           </div>
 
@@ -103,7 +103,7 @@ export function Header() {
               <li className="pt-4 flex items-center gap-3">
                 <ThemeToggle />
                 <Button variant="default" className="flex-1" asChild>
-                  <a href="#contact">Book a Call</a>
+                  <a href="https://cal.com/rifat-alom-2003/30-min" target="_blank" rel="noopener noreferrer">Book a Call</a>
                 </Button>
               </li>
             </ul>
